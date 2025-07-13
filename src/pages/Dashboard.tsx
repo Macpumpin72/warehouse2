@@ -1,4 +1,5 @@
 import { MetricCard } from "@/components/MetricCard"
+import { SalesChart } from "@/components/charts/SalesChart"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -111,29 +112,8 @@ export default function Dashboard() {
         </Card>
       </div>
 
-      {/* Sales Summary */}
-      <Card className="hover:shadow-md transition-shadow">
-        <CardHeader className="flex flex-row items-center justify-between pb-3">
-          <div>
-            <CardTitle className="text-lg font-semibold">Sales summary</CardTitle>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-muted-foreground">Last 7 days</span>
-          </div>
-        </CardHeader>
-        <CardContent className="p-3 md:p-6">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <DollarSign className="h-4 w-4 text-blue-500" />
-              <span className="text-sm font-medium text-muted-foreground">Total sales</span>
-            </div>
-            <p className="text-2xl md:text-3xl font-bold">NGN 3,034,750</p>
-            <div className="h-32 md:h-48 bg-muted/20 rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground text-sm">Sales chart visualization</p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+      {/* Real-time Sales Chart */}
+      <SalesChart />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
         {/* Items to Restock */}
